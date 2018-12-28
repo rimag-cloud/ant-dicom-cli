@@ -2,7 +2,9 @@ FROM rimag/dicom-cli:1.0-dcmtk-python-slim-stretch
 
 WORKDIR /opt
 
-RUN wget https://github.com/rimag-cloud/ant-dicom-cli/archive/master.zip \
+RUN apt-get update \
+    && apt-get install curl -y \
+    && wget https://github.com/rimag-cloud/ant-dicom-cli/archive/master.zip \
     && unzip master.zip \
     && rm -f master.zip \
     && mv ant-dicom-cli-master ant-dicom-cli \
