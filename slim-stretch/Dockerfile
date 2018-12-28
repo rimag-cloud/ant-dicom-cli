@@ -11,7 +11,7 @@ RUN apt-get update \
     && cp ant-dicom-cli/start.sh ./ \
     && cp -r ant-dicom-cli/obs_v3_0_4_sdk_src ./ \
     && pip install -U setuptools \
-    && pip install flask flask-restful APScheduler flasgger pynsq retry PyYAML zc.lockfile SQLAlchemy PyMySQL requests gunicorn \
+    && pip install flask flask-restful APScheduler flasgger pynsq retry PyYAML zc.lockfile SQLAlchemy PyMySQL requests oss2 gunicorn \
     && cd obs_v3_0_4_sdk_src \
     && python setup.py install \
     && cd .. \
